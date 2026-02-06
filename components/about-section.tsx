@@ -31,7 +31,7 @@ export function AboutSection() {
               Uc nesil ahsap iscilik ustaligi
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground sm:mt-6 sm:text-base">
-              1987 yilinda usta marangoz Edward Oakwood tarafindan kurulan aile
+              1987 yilinda usta marangoz Murat Çelik tarafindan kurulan aile
               atolyemiz, kucuk bir kasaba atolyesinden tam donanimli bir uretim
               studyosuna donustu. Bugun, on iki yetenekli zanaat ustasi,
               ailelerin nesiller boyu degerlendirdigi mobilya yapma gelenegini

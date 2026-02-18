@@ -31,7 +31,7 @@ export function AboutSection() {
               Üç nesil ahşap işçilik ustalığı
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground sm:mt-6 sm:text-base">
-              2010 yılında usta marangoz Murat Çelik tarafından kurulan atölyemiz, yıllar içinde büyüyerek modern bir üretim stüdyosuna dönüştü. Geleneksel el işçiliğini çağdaş tasarımla birleştirerek zamansız mobilyalar üretiyoruz.
+              1987 yılında usta marangoz Murat Çelik tarafından kurulan atölyemiz, yıllar içinde büyüyerek modern bir üretim stüdyosuna dönüştü. Geleneksel el işçiliğini çağdaş tasarımla birleştirerek zamansız mobilyalar üretiyoruz.
             </p>
             <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground sm:mt-4 sm:text-base">
               Her tahtayı sertifikalı sürdürülebilir ormanlardan temin ediyor ve

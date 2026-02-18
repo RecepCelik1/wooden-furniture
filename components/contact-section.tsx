@@ -13,6 +13,7 @@ export function ContactSection() {
     cabinets: "Dolaplar",
     tables: "Masalar",
     shelving: "Raflar",
+    facade: "Dış Cephe",
     custom: "Özel Proje",
   };
 
@@ -179,6 +180,7 @@ export function ContactSection() {
                     <option value="cabinets">Dolaplar</option>
                     <option value="tables">Masalar</option>
                     <option value="shelving">Raflar</option>
+                    <option value="facade">Dış Cephe</option>
                     <option value="custom">Özel Proje</option>
                   </select>
                 </div>

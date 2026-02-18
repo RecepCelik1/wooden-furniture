@@ -57,7 +57,7 @@ export function Footer() {
             {"2026 Oakwood & Co. Tüm hakları saklıdır."}
           </p>
           <p className="text-xs text-primary-foreground/40">
-            142 Cedar Mill Lane, Asheville, NC 28801
+            Yokuşbaşı mahallesi Gocadaş Sokak 4/3
           </p>
         </div>
       </div>

@@ -245,7 +245,7 @@ export function ContactSection() {
                 <div>
                   <p className="text-sm font-medium text-foreground">Atölye</p>
                   <p className="mt-0.5 text-[15px] text-muted-foreground sm:text-base">
-                    142 Cedar Mill Lane, Asheville, NC 28801
+                    Yokuşbaşı mahallesi Gocadaş Sokak 4/3
                   </p>
                 </div>
               </li>

@@ -1,19 +1,71 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const productLabels: Record<string, string> = {
+    doors: "Kapılar",
+    cabinets: "Dolaplar",
+    tables: "Masalar",
+    shelving: "Raflar",
+    custom: "Özel Proje",
+  };
+
+  useEffect(() => {
+    if (!submitted) return;
+
+    const timeoutId = window.setTimeout(() => {
+      setSubmitted(false);
+    }, 1500);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [submitted]);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setError(null);
     setLoading(true);
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setLoading(false);
-    setSubmitted(true);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const name = String(formData.get("firstName") ?? "").trim();
+    const surname = String(formData.get("lastName") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const product = String(formData.get("product") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
+    const subject = `Web Talebi - ${productLabels[product] ?? "Genel"}`;
+
+    try {
+      const response = await fetch("/api/form-submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          surname,
+          email,
+          subject,
+          message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form gönderilemedi");
+      }
+
+      setSubmitted(true);
+      form.reset();
+    } catch {
+      setError("Mesaj gönderilemedi. Lütfen tekrar deneyin.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -22,32 +74,32 @@ export function ContactSection() {
         {/* Section header */}
         <div className="mb-10 max-w-xl sm:mb-14">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent sm:text-sm sm:tracking-[0.25em]">
-            Iletisim
+            İletişim
           </p>
           <h2 className="mt-2 font-serif text-3xl text-foreground sm:mt-3 sm:text-4xl md:text-5xl text-balance">
-            {"Projenizi planlamaya baslayalim"}
+            {"Projenizi planlamaya başlayalım"}
           </h2>
           <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground sm:mt-4 sm:text-base">
-            Detayli bir planiniz ya da sadece bir fikir tohumunuz olsun,
-            sizden haber almak isteriz. Bize ulasin, ekip uyelerimizden biri
-            24 saat icinde sizinle iletisime gececektir.
+            Detaylı bir planınız ya da sadece bir fikir tohumunuz olsun,
+            sizden haber almak isteriz. Bize ulaşın, ekip üyelerimizden biri
+            24 saat içinde sizinle iletişime geçecektir.
           </p>
         </div>
 
         <div className="grid gap-10 lg:grid-cols-5 lg:gap-16">
           {/* Left column — form (wider) */}
-          <div className="rounded-sm border border-border bg-card p-5 sm:p-8 lg:col-span-3 lg:p-10">
+          <div className="rounded-md border border-border bg-card p-5 sm:p-8 lg:col-span-3 lg:p-10">
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-12 text-center sm:py-16">
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-accent/10 sm:h-16 sm:w-16">
                   <Mail className="h-7 w-7 text-accent sm:h-8 sm:w-8" />
                 </div>
                 <h3 className="mt-5 font-serif text-xl text-foreground sm:mt-6 sm:text-2xl">
-                  Mesajiniz gonderildi
+                  Mesajınız gönderildi
                 </h3>
                 <p className="mt-2 max-w-xs text-[15px] text-muted-foreground sm:text-base">
-                  Bizimle iletisime gectiginiz icin tesekkurler. Ekibimiz bir
-                  is gunu icinde size donecektir.
+                  Bizimle iletişime geçtiğiniz için teşekkürler. Ekibimiz bir
+                  iş günü içinde size dönecektir.
                 </p>
               </div>
             ) : (
@@ -64,8 +116,9 @@ export function ContactSection() {
                       id="firstName"
                       name="firstName"
                       type="text"
+                      minLength={2}
                       required
-                      className="rounded-sm border border-input bg-background px-4 py-3 text-[15px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring sm:py-2.5 sm:text-sm"
+                      className="rounded-xl border border-input bg-background px-4 py-3 text-[15px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring sm:py-2.5 sm:text-sm"
                       placeholder="Ahmet"
                     />
                   </div>
@@ -80,9 +133,10 @@ export function ContactSection() {
                       id="lastName"
                       name="lastName"
                       type="text"
+                      minLength={2}
                       required
-                      className="rounded-sm border border-input bg-background px-4 py-3 text-[15px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring sm:py-2.5 sm:text-sm"
-                      placeholder="Yilmaz"
+                      className="rounded-xl border border-input bg-background px-4 py-3 text-[15px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring sm:py-2.5 sm:text-sm"
+                      placeholder="Yılmaz"
                     />
                   </div>
                 </div>
@@ -99,7 +153,7 @@ export function ContactSection() {
                     name="email"
                     type="email"
                     required
-                    className="rounded-sm border border-input bg-background px-4 py-3 text-[15px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring sm:py-2.5 sm:text-sm"
+                    className="rounded-xl border border-input bg-background px-4 py-3 text-[15px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring sm:py-2.5 sm:text-sm"
                     placeholder="ahmet@ornek.com"
                   />
                 </div>
@@ -109,23 +163,23 @@ export function ContactSection() {
                     htmlFor="product"
                     className="text-sm font-medium text-foreground"
                   >
-                    Ilgilendiginiz Urun
+                    İlgilendiğiniz Ürün
                   </label>
                   <select
                     id="product"
                     name="product"
-                    className="rounded-sm border border-input bg-background px-4 py-3 text-[15px] text-foreground focus:outline-none focus:ring-2 focus:ring-ring sm:py-2.5 sm:text-sm"
+                    className="rounded-xl border border-input bg-background px-4 py-3 text-[15px] text-foreground focus:outline-none focus:ring-2 focus:ring-ring sm:py-2.5 sm:text-sm"
                     defaultValue=""
                     required
                   >
                     <option value="" disabled>
-                      Bir kategori secin
+                      Bir kategori seçin
                     </option>
-                    <option value="doors">Kapilar</option>
+                    <option value="doors">Kapılar</option>
                     <option value="cabinets">Dolaplar</option>
                     <option value="tables">Masalar</option>
                     <option value="shelving">Raflar</option>
-                    <option value="custom">Ozel Proje</option>
+                    <option value="custom">Özel Proje</option>
                   </select>
                 </div>
 
@@ -134,24 +188,30 @@ export function ContactSection() {
                     htmlFor="message"
                     className="text-sm font-medium text-foreground"
                   >
-                    Mesajiniz
+                    Mesajınız
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     rows={4}
                     required
-                    className="rounded-sm border border-input bg-background px-4 py-3 text-[15px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring sm:py-2.5 sm:text-sm"
-                    placeholder="Projeniz, olculer, ahsap tercihleri hakkinda bilgi verin..."
+                    className="rounded-xl border border-input bg-background px-4 py-3 text-[15px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring sm:py-2.5 sm:text-sm"
+                    placeholder="Projeniz, ölçüler, ahşap tercihleri hakkında bilgi verin..."
                   />
                 </div>
+
+                {error && (
+                  <p className="text-sm text-destructive" role="alert">
+                    {error}
+                  </p>
+                )}
 
                 <button
                   type="submit"
                   disabled={loading}
-                  className="rounded-sm bg-accent px-7 py-3.5 text-[15px] font-medium text-accent-foreground transition-colors hover:bg-accent/90 disabled:opacity-60 sm:py-3 sm:text-sm"
+                  className="rounded-xl bg-accent px-7 py-3.5 text-[15px] font-medium text-accent-foreground transition-colors hover:bg-accent/90 disabled:opacity-60 sm:py-3 sm:text-sm"
                 >
-                  {loading ? "Gonderiliyor..." : "Mesaj Gonder"}
+                  {loading ? "Gönderiliyor..." : "Mesaj Gönder"}
                 </button>
               </form>
             )}
@@ -166,7 +226,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-foreground">E-posta</p>
-                  <p className="mt-0.5 text-[15px] text-muted-foreground sm:text-base">merhaba@oakwoodco.com</p>
+                  <p className="mt-0.5 text-[15px] text-muted-foreground sm:text-base">muratcelik_@outlook.com.tr</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -175,7 +235,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-foreground">Telefon</p>
-                  <p className="mt-0.5 text-[15px] text-muted-foreground sm:text-base">(555) 234-5678</p>
+                  <p className="mt-0.5 text-[15px] text-muted-foreground sm:text-base">+90 553 651 51 51</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -183,7 +243,7 @@ export function ContactSection() {
                   <MapPin className="h-5 w-5 text-accent" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-foreground">Atolye</p>
+                  <p className="text-sm font-medium text-foreground">Atölye</p>
                   <p className="mt-0.5 text-[15px] text-muted-foreground sm:text-base">
                     142 Cedar Mill Lane, Asheville, NC 28801
                   </p>

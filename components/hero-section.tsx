@@ -18,7 +18,7 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-workshop.jpg"
-          alt="El yapimi mobilya parcalariyla Oakwood atolyesi"
+          alt="El yapımı mobilya parçalarıyla Oakwood atölyesi"
           fill
           className="object-cover"
           priority
@@ -30,15 +30,15 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-16 pt-32 sm:px-6 sm:py-32 lg:px-8 lg:py-40">
         <div className="max-w-xl lg:max-w-2xl">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-secondary/90 sm:text-sm sm:tracking-[0.25em]">
-            1987'den Beri El Yapimi
+            1987'den Beri El Yapımı
           </p>
           <h1 className="mt-3 font-serif text-4xl leading-snug text-primary-foreground sm:mt-4 sm:text-5xl sm:leading-tight md:text-6xl lg:text-7xl lg:leading-tight text-balance">
-            Usta iscilik, zamansiz tasarim
+            Usta işçilik, zamansız tasarım
           </h1>
           <p className="mt-4 max-w-md text-base leading-relaxed text-secondary/70 sm:mt-6 sm:max-w-lg sm:text-lg sm:text-secondary/80">
-            Surdurulebilir kaynaklardan elde edilen sert agaclarla ozel tasarim
-            ahsap kapilar, dolaplar, masalar ve raflar uretiyoruz. Her parca,
-            titiz bir ustalik hikayesi anlatir.
+            Sürdürülebilir kaynaklardan elde edilen sert ağaçlarla özel tasarım
+            ahşap kapılar, dolaplar, masalar ve raflar üretiyoruz. Her parça,
+            titiz bir ustalık hikâyesi anlatır.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4">
             <Link
@@ -46,7 +46,7 @@ export function HeroSection() {
               onClick={(e) => scrollTo(e, "#urunler")}
               className="rounded-sm bg-accent px-7 py-3.5 text-center text-sm font-medium text-accent-foreground transition-colors hover:bg-accent/90 sm:py-3"
             >
-              Urunlerimizi Inceleyin
+              Ürünlerimizi İnceleyin
             </Link>
             <Link
               href="#hakkimizda"

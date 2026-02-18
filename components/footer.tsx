@@ -1,16 +1,17 @@
 import Link from "next/link";
 
 const footerLinks = {
-  "Urunler": [
-    { label: "Kapilar", href: "#urunler" },
+  "Ürünler": [
+    { label: "Kapılar", href: "#urunler" },
     { label: "Dolaplar", href: "#urunler" },
     { label: "Masalar", href: "#urunler" },
     { label: "Raflar", href: "#urunler" },
+    { label: "Dış Cephe", href: "#urunler" },
   ],
-  "Sirket": [
-    { label: "Hakkimizda", href: "#hakkimizda" },
-    { label: "Surecimiz", href: "#surecimiz" },
-    { label: "Iletisim", href: "#iletisim" },
+  "Şirket": [
+    { label: "Hakkımızda", href: "#hakkimizda" },
+    { label: "Sürecimiz", href: "#surecimiz" },
+    { label: "İletişim", href: "#iletisim" },
   ],
 };
 
@@ -23,9 +24,9 @@ export function Footer() {
           <div className="sm:col-span-2">
             <p className="font-serif text-xl sm:text-2xl">{"Oakwood & Co."}</p>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-primary-foreground/60">
-              1987'den bu yana premium el yapimi ahsap mobilya. Her parca
-              surdurulebilir kaynaklardan, uzman ellerle uretilmis ve
-              dayaniklilik icin tasarlanmistir.
+              1987'den bu yana premium el yapımı ahşap mobilya. Her parça
+              sürdürülebilir kaynaklardan, uzman ellerle üretilmiş ve
+              dayanıklılık için tasarlanmıştır.
             </p>
           </div>
 
@@ -53,7 +54,7 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-primary-foreground/10 pt-8 sm:mt-14 sm:flex-row">
           <p className="text-xs text-primary-foreground/40">
-            {"2026 Oakwood & Co. Tum haklari saklidir."}
+            {"2026 Oakwood & Co. Tüm hakları saklıdır."}
           </p>
           <p className="text-xs text-primary-foreground/40">
             142 Cedar Mill Lane, Asheville, NC 28801

@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const stats = [
-  { value: "35+", label: "Yillik Deneyim" },
+  { value: "35+", label: "Yıllık Deneyim" },
   { value: "2.400+", label: "Tamamlanan Proje" },
-  { value: "%100", label: "Surdurulebilir Kaynak" },
+  { value: "%100", label: "Sürdürülebilir Kaynak" },
 ];
 
 export function AboutSection() {
@@ -15,7 +15,7 @@ export function AboutSection() {
           <div className="relative aspect-[3/4] overflow-hidden rounded-sm sm:aspect-[4/5]">
             <Image
               src="/images/craftsman-at-work.jpg"
-              alt="Atolyede bir mobilya parcasini ozenle zimpralayan usta marangoz"
+              alt="Atölyede bir mobilya parçasını özenle zımparalayan usta marangoz"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -28,19 +28,15 @@ export function AboutSection() {
               Hikayemiz
             </p>
             <h2 className="mt-2 font-serif text-3xl text-foreground sm:mt-3 sm:text-4xl md:text-5xl text-balance">
-              Uc nesil ahsap iscilik ustaligi
+              Üç nesil ahşap işçilik ustalığı
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground sm:mt-6 sm:text-base">
-              1987 yilinda usta marangoz Edward Oakwood tarafindan kurulan aile
-              atolyemiz, kucuk bir kasaba atolyesinden tam donanimli bir uretim
-              studyosuna donustu. Bugun, on iki yetenekli zanaat ustasi,
-              ailelerin nesiller boyu degerlendirdigi mobilya yapma gelenegini
-              surdurmektedir.
+              2010 yılında usta marangoz Murat Çelik tarafından kurulan atölyemiz, yıllar içinde büyüyerek modern bir üretim stüdyosuna dönüştü. Geleneksel el işçiliğini çağdaş tasarımla birleştirerek zamansız mobilyalar üretiyoruz.
             </p>
             <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground sm:mt-4 sm:text-base">
-              Her tahtayi sertifikali surdurulebilir ormanlardan temin ediyor ve
-              ahsabin dogal karakterinin her tasarima yol gostermesine izin
-              veriyoruz. Hicbir iki parca ayni degildir — ve mesele tam da
+              Her tahtayı sertifikalı sürdürülebilir ormanlardan temin ediyor ve
+              ahşabın doğal karakterinin her tasarıma yol göstermesine izin
+              veriyoruz. Hiçbir iki parça aynı değildir; ve mesele tam da
               budur.
             </p>
 

@@ -3,27 +3,27 @@ import { Ruler, Pencil, Hammer, Truck } from "lucide-react";
 const steps = [
   {
     icon: Pencil,
-    title: "Danismanlik",
+    title: "Danışmanlık",
     description:
-      "Vizyonunuzu, mekaninizi ve ihtiyaclarinizi konusmak icin bulusuyoruz. Birlikte agac turunu, kaplamayi ve tarzi belirliyoruz.",
+      "Vizyonunuzu, mekânınızı ve ihtiyaçlarınızı konuşmak için buluşuyoruz. Birlikte ağaç türünü, kaplamayı ve tarzı belirliyoruz.",
   },
   {
     icon: Ruler,
-    title: "Tasarim",
+    title: "Tasarım",
     description:
-      "Ekibimiz, tek bir kesim yapilmadan once nihai parcayi gorebilmeniz icin detayli cizimler ve 3D renderlar hazirlayarak sunar.",
+      "Ekibimiz, tek bir kesim yapılmadan önce nihai parçayı görebilmeniz için detaylı çizimler ve 3D renderlar hazırlayarak sunar.",
   },
   {
     icon: Hammer,
-    title: "Uretim",
+    title: "Üretim",
     description:
-      "Usta zanaatkarlar, atolyemizde koklesmis teknikler ve modern hassas aletler kullanarak parcanizi sekillendiriyor, birlestirir ve perdahlari yapar.",
+      "Usta zanaatkârlar, atölyemizde kökleşmiş teknikler ve modern hassas aletler kullanarak parçanızı şekillendirir, birleştirir ve perdahını yapar.",
   },
   {
     icon: Truck,
     title: "Teslimat ve Montaj",
     description:
-      "Ozel teslimat ve profesyonel montaj hizmeti sunuyoruz; mobilyaniz ilk gunden itibaren mukemmel bir sekilde yerine otursun.",
+      "Özel teslimat ve profesyonel montaj hizmeti sunuyoruz; mobilyanız ilk günden itibaren mükemmel bir şekilde yerine otursun.",
   },
 ];
 
@@ -33,13 +33,13 @@ export function ProcessSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-10 max-w-xl text-center sm:mb-16">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent sm:text-sm sm:tracking-[0.25em]">
-            Surecimiz
+            Sürecimiz
           </p>
           <h2 className="mt-2 font-serif text-3xl text-foreground sm:mt-3 sm:text-4xl md:text-5xl text-balance">
             Fikirden tamamlanmaya
           </h2>
           <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground sm:mt-4 sm:text-lg">
-            Her detayin kontrolunu size birakan seffaf, dort adimlik bir
+            Her detayın kontrolünü size bırakan şeffaf, dört adımlık bir
             yolculuk.
           </p>
         </div>

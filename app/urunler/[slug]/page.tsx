@@ -17,8 +17,18 @@ export async function generateMetadata({
   if (!category) return {};
 
   return {
-    title: `${category.title} | Oakwood & Co.`,
-    description: category.description,
+    title: `${category.title} - Bodrum Özel Tasarım`,
+    description: `${category.description} Muğla Bodrum'da proje ve keşif talepleriniz için bizimle iletişime geçin.`,
+    alternates: {
+      canonical: `/urunler/${category.slug}`,
+    },
+    openGraph: {
+      title: `${category.title} | Oakwood & Co.`,
+      description: category.description,
+      url: `/urunler/${category.slug}`,
+      locale: "tr_TR",
+      type: "article",
+    },
   };
 }
 

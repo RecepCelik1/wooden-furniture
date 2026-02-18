@@ -9,10 +9,10 @@ import { Menu, X } from "lucide-react";
 const sectionIds = ["urunler", "hakkimizda", "surecimiz", "iletisim"];
 
 const navLinks = [
-  { label: "Urunler", href: "#urunler" },
-  { label: "Hakkimizda", href: "#hakkimizda" },
-  { label: "Surecimiz", href: "#surecimiz" },
-  { label: "Iletisim", href: "#iletisim" },
+  { label: "Hakkımızda", href: "#hakkimizda" },
+  { label: "Sürecimiz", href: "#surecimiz" },
+  { label: "Ürünler", href: "#urunler" },
+  { label: "İletişim", href: "#iletisim" },
 ];
 
 export function Navbar() {
@@ -119,7 +119,7 @@ export function Navbar() {
             onClick={(e) => handleClick(e, "#iletisim")}
             className="hidden rounded-sm bg-accent px-5 py-2 text-[13px] font-medium text-accent-foreground transition-colors hover:bg-accent/90 lg:inline-block"
           >
-            Teklif Alin
+            Teklif Alın
           </Link>
 
           {/* Mobile toggle */}
@@ -127,7 +127,7 @@ export function Navbar() {
             type="button"
             className="flex h-10 w-10 items-center justify-center rounded-sm text-foreground transition-colors hover:bg-muted lg:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={mobileOpen ? "Menuyu kapat" : "Menuyu ac"}
+            aria-label={mobileOpen ? "Menüyü kapat" : "Menüyü aç"}
           >
             {mobileOpen ? (
               <X className="h-5 w-5" />
@@ -169,7 +169,7 @@ export function Navbar() {
                 }}
                 className="block rounded-sm bg-accent px-5 py-3 text-center text-[15px] font-medium text-accent-foreground"
               >
-                Teklif Alin
+                Teklif Alın
               </Link>
             </li>
           </ul>

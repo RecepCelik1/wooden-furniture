@@ -24,7 +24,7 @@ export function CategoryShowcase({ category }: CategoryShowcaseProps) {
             className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             <ArrowLeft className="h-4 w-4" />
-            <span className="hidden sm:inline">Tum Urunler</span>
+            <span className="hidden sm:inline">Tüm Ürünler</span>
             <span className="sm:hidden">Geri</span>
           </Link>
           <Link href="/" className="font-serif text-lg tracking-tight text-foreground sm:text-xl">
@@ -34,7 +34,7 @@ export function CategoryShowcase({ category }: CategoryShowcaseProps) {
             href="/#iletisim"
             className="hidden rounded-sm bg-accent px-5 py-2 text-[13px] font-medium text-accent-foreground transition-colors hover:bg-accent/90 sm:inline-block"
           >
-            Teklif Alin
+            Teklif Alın
           </Link>
           <span className="w-16 sm:hidden" aria-hidden="true" />
         </div>
@@ -124,12 +124,12 @@ export function CategoryShowcase({ category }: CategoryShowcaseProps) {
                 <X className="h-5 w-5" />
               </button>
             </div>
-            <div className="relative aspect-[4/3] w-full sm:aspect-[16/10]">
+            <div className="relative h-[55vh] w-full bg-black/5 sm:h-[65vh]">
               <Image
                 src={lightbox.src || "/placeholder.svg"}
                 alt={lightbox.alt}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 640px) 100vw, 896px"
               />
             </div>

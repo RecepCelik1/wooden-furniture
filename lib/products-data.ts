@@ -15,122 +15,152 @@ export interface CategoryData {
 
 export const categories: Record<string, CategoryData> = {
   kapilar: {
-    title: "Kapilar",
+    title: "Kapılar",
     slug: "kapilar",
-    headline: "El yapimi ahsap kapilar",
+    headline: "El yapımı ahşap kapılar",
     description:
-      "Rustik panel tasarimlardan sik modern profillere kadar her tarza uygun, masif sert agactan uretilen ic ve dis kapilar. Her kapi, mekaniniza sicaklik ve karakter katar.",
+      "Rustik panel tasarımlardan şık modern profillere kadar her tarza uygun, masif sert ağaçtan üretilen iç ve dış kapılar. Her kapı, mekânınıza sıcaklık ve karakter katar.",
     gallery: [
       {
         src: "/images/gallery/doors-1.jpg",
-        alt: "Masif ceviz ic kapi",
-        label: "Ceviz Panel Kapi",
+        alt: "Masif ceviz iç kapı",
+        label: "Ceviz Panel Kapı",
         description:
-          "Masif ceviz agacindan uretilen yukseltilmis panelli ic kapi. Dogal ahsap damarli, sicak bal rengi perdah.",
-      },
-      {
-        src: "/images/gallery/doors-2.jpg",
-        alt: "Rustik surme ahir kapisi",
-        label: "Surme Ahir Kapisi",
-        description:
-          "Geri donusturulmus ahsaptan uretilen surme ahir kapisi. Demir aksesuar detaylari ve dogal doku.",
+          "Masif ceviz ağacından üretilen yükseltilmiş panelli iç kapı. Doğal ahşap damarlı, sıcak bal rengi perdah.",
       },
       {
         src: "/images/gallery/doors-3.jpg",
-        alt: "Modern mese dis kapi",
-        label: "Modern Giris Kapisi",
+        alt: "Modern meşe dış kapı",
+        label: "Modern Giriş Kapısı",
         description:
-          "Cam yan panellerle tamamlanan minimalist mese giris kapisi. Cagdas mimari icin ideal.",
+          "Cam yan panellerle tamamlanan minimalist meşe giriş kapısı. Çağdaş mimari için ideal.",
       },
     ],
   },
   dolaplar: {
     title: "Dolaplar",
     slug: "dolaplar",
-    headline: "Ozel tasarim ahsap dolaplar",
+    headline: "Özel tasarım ahşap dolaplar",
     description:
-      "Mutfak, banyo ve depolama dolaplari tam olculerinize gore uretilir. Premium marangozluk teknikleriyle nesiller boyu dayanan dolaplar.",
+      "Mutfak, banyo ve depolama dolapları tam ölçülerinize göre üretilir. Premium marangozluk teknikleriyle nesiller boyu dayanan dolaplar.",
     gallery: [
       {
-        src: "/images/gallery/cabinets-1.jpg",
-        alt: "Beyaz mese mutfak dolaplari",
-        label: "Mese Mutfak Dolabi",
+        src: "/images/gallery/cabinet.jpeg",
+        alt: "Beyaz meşe mutfak dolapları",
+        label: "Doğal Dokunuşlu Modern Mutfak",
         description:
-          "Pirinc kulplu beyaz mese mutfak dolaplari. Mermer tezgahla uyumlu, parlak ve modern tasarim.",
+          "Beyaz dolaplarla uyumlu ahşap çıtalı panel ve sarkıt aydınlatmalar. Sıcak dokunuşlarla modern ve sade bir tasarım.",
+      },
+      {
+        src: "/images/gallery/cabinet-4.jpeg",
+        alt: "Beyaz meşe mutfak dolapları",
+        label: "Klasik Beyaz Mutfak",
+        description:
+          "Altın ton kulplar ve mermer desenli ada tezgâh şık bir bütünlük sunar. Sıcak LED aydınlatma ile zarif ve davetkâr bir atmosfer oluşturur.",
+      },
+      {
+        src: "/images/gallery/cabinets-1.jpg",
+        alt: "Beyaz meşe mutfak dolapları",
+        label: "Lake Kaplama Shaker Mutfak",
+        description:
+          "Pirinç kulplu beyaz meşe mutfak dolapları. Mermer tezgahla uyumlu, parlak ve modern tasarım.",
       },
       {
         src: "/images/gallery/cabinets-2.jpg",
-        alt: "Ceviz banyo dolabi",
-        label: "Banyo Dolabi",
+        alt: "Ceviz banyo dolabı",
+        label: "Banyo Dolabı",
         description:
-          "Koyu ceviz perdahli cift lavabolu banyo dolabi. Zarif hatlar ve genis depolama alani.",
+          "Koyu ceviz perdahlı çift lavabolu banyo dolabı. Zarif hatlar ve geniş depolama alanı.",
       },
       {
         src: "/images/gallery/cabinets-3.jpg",
-        alt: "Gomme gardrop sistemi",
-        label: "Gomme Gardrop",
+        alt: "Gömme gardırop sistemi",
+        label: "Gömme Gardırop",
         description:
-          "Acik raflar ve cekmecelerle donatilmis gomme gardrop sistemi. Dogal kiraz agaci perdahli.",
+          "Açık raflar ve çekmecelerle donatılmış gömme gardırop sistemi. Doğal kiraz ağacı perdahlı.",
       },
     ],
   },
   masalar: {
     title: "Masalar",
     slug: "masalar",
-    headline: "Essiz ahsap masalar",
+    headline: "Eşsiz ahşap masalar",
     description:
-      "Dogal kenar dilimlerinden ve seckin sert agaclardan uretilen yemek masalari, sehpalar ve calisma masalari. Her parca tek ve essizdir.",
+      "Doğal kenar dilimlerinden ve seçkin sert ağaçlardan üretilen yemek masaları, sehpalar ve çalışma masaları. Her parça tek ve eşsizdir.",
     gallery: [
       {
-        src: "/images/gallery/tables-1.jpg",
-        alt: "Dogal kenar yemek masasi",
-        label: "Dogal Kenar Yemek Masasi",
+        src: "/images/gallery/table.png",
+        alt: "Doğal kenar yemek masası",
+        label: "Doğal Kenar Yemek Masası",
         description:
-          "Siyah metal ayakli dogal kenar ceviz yemek masasi. 8 kisilik, modern yemek odasi icin ideal.",
+          "Siyah metal ayaklı doğal kenar ceviz yemek masası. 8 kişilik, modern yemek odası için ideal.",
       },
       {
         src: "/images/gallery/tables-2.jpg",
-        alt: "Yuvarlak mese sehpa",
-        label: "Mese Sehpa",
+        alt: "Yuvarlak meşe sehpa",
+        label: "Meşe Sehpa",
         description:
-          "Tornali ayaklara sahip el yapimi yuvarlak mese sehpa. Sicak ve samimi oturma odalari icin.",
+          "Tornalı ayaklara sahip el yapımı yuvarlak meşe sehpa. Sıcak ve samimi oturma odaları için.",
       },
       {
-        src: "/images/gallery/tables-3.jpg",
-        alt: "Minimalist calisma masasi",
-        label: "Calisma Masasi",
+        src: "/images/gallery/table-4.png",
+        alt: "Minimalist çalışma masası",
+        label: "Çalışma Masası",
         description:
-          "Sade hatlarla tasarlanmis masif ceviz calisma masasi. Ev ofisi icin minimalist ve fonksiyonel.",
+          "Sade hatlarla tasarlanmış masif ceviz çalışma masası. Ev ofisi için minimalist ve fonksiyonel.",
       },
     ],
   },
   raflar: {
     title: "Raflar",
     slug: "raflar",
-    headline: "Ahsap raf ve kitaplik sistemleri",
+    headline: "Ahşap raf ve kitaplık sistemleri",
     description:
-      "Mekaninizi sicaklik ve karakterle tamamlayan gomme kitapliklar, duvar raflari ve serbest duran uniteler.",
+      "Mekânınızı sıcaklık ve karakterle tamamlayan gömme kitaplıklar, duvar rafları ve serbest duran üniteler.",
     gallery: [
       {
         src: "/images/gallery/shelving-1.jpg",
-        alt: "Gomme kitaplik duvari",
-        label: "Gomme Kitaplik",
+        alt: "Gömme kitaplık duvarı",
+        label: "Gömme Kitaplık",
         description:
-          "Yerden tavana uzanan ozel tasarim gomme kitaplik duvari. Mese agaci perdahli, calisma odasi icin.",
+          "Yerden tavana uzanan özel tasarım gömme kitaplık duvarı. Meşe ağacı perdahlı, çalışma odası için.",
       },
       {
         src: "/images/gallery/shelving-2.jpg",
-        alt: "Duvar raflari",
-        label: "Duvar Raflari",
+        alt: "Duvar rafları",
+        label: "Duvar Rafları",
         description:
-          "Ceviz perdahli asma duvar raflari. Minimalist salon dekorasyonu icin sik ve modern tasarim.",
+          "Ceviz perdahlı asma duvar rafları. Minimalist salon dekorasyonu için şık ve modern tasarım.",
       },
       {
-        src: "/images/gallery/shelving-3.jpg",
-        alt: "Serbest raf unitesi",
-        label: "Sergileme Rafi",
+        src: "/images/gallery/shelv.png",
+        alt: "Serbest raf ünitesi",
+        label: "Doğal Meşe Kaplama Portmanto",
         description:
-          "Asimetrik bolmeli serbest duran sergileme rafi. Dogal sert agac perdahli, yasam alanlari icin.",
+          "Doğal meşe kaplama gövde, kavisli köşe detayları ve entegre LED aydınlatma. Cam bölmeli sergileme alanı ve geniş çekmeceli alt modül.",
+      },
+    ],
+  },
+  "dis-cephe": {
+    title: "Dış Cephe",
+    slug: "dis-cephe",
+    headline: "Dayanıklı dış cephe çözümleri",
+    description:
+      "Yapılarınızı dış etkenlerden koruyan ve estetik değer katan, hava koşullarına dayanıklı ahşap cephe kaplamaları ve dekoratif uygulamalar.",
+    gallery: [
+      {
+        src: "/images/gallery/decade.png",
+        alt: "Ahşap dış cephe kaplama",
+        label: "Modern Cephe Kaplama",
+        description:
+          "Modern mimariyle uyumlu, ısıl işlem görmüş dayanıklı ahşap dış cephe uygulaması.",
+      },
+      {
+        src: "/images/gallery/veranda.png",
+        alt: "Ahşap veranda ve sundurma",
+        label: "Ahşap Veranda",
+        description:
+          "Dış mekân keyfini artıran, estetik ve sağlam masif ahşap veranda tasarımı.",
       },
     ],
   },
